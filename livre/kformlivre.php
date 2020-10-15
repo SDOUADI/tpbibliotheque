@@ -10,9 +10,9 @@ include "../includes/define.php";
 				
 			
 
-			$sql = "select *  FROM livre WHERE id_livre=$id_livre";
+			$sql = "select livre.*,publier.date_publication  FROM livre,publier WHERE livre.id_livre=$id_livre and publier.id_livre=livre.id_livre";
 			$sth = $conn->prepare($sql);
-
+           
 			$sth->execute();
 			$result = $sth->fetch(PDO::FETCH_ASSOC);
 
@@ -20,7 +20,8 @@ include "../includes/define.php";
 			$titre=$result['titre'];
 			$genre=$result['genre'];
 			$logolivre=$result['logolivre'];
-		
+			$date_publication=$result['date_publication'];
+		    
 				 $action=$path['updatelivre'];
 				 $titreForm=" MODIFIER LIVRE ";
 		}
@@ -114,7 +115,7 @@ include "../includes/define.php";
 			
 			<div class="c100">
 			<label for="date_publication">Date de publication</label>
-			<input type="date" id="date_publication" name="date_publication">  
+			<input type="date" id="date_publication" name="date_publication" value="<?php echo @$date_publication; ?>">  
 			</div>
 			
 			<div class="c100">

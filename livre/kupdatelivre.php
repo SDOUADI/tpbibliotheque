@@ -17,7 +17,7 @@ include_once "../includes/functions.php";  /*inclus le php contenant les fonctio
 		
 try{
 
-		
+		if($id_bibliotheque!="" && $logolivre!="" && $id_auteur!="" && $id_editeur!=""){
 		$sql = "UPDATE livre set titre=:titre, id_bibliotheque=:id_bibliotheque, genre=:genre, logolivre=:logolivre WHERE id_livre=$id_livre";
 
 		$params=array(':id_bibliotheque' => $id_bibliotheque,
@@ -41,13 +41,38 @@ try{
 		$sth = $conn->prepare($sql);
 
 		$sth->execute($params);
-		header('Location:../admin/starter.php?page=livrelist');      
+		    
+        }
+		else if($id_bibliotheque=="" && $logolivre!="" && $id_auteur=="" && $id_editeur==""){
+		
+			$sql = "UPDATE livre set titre=:titre, genre=:genre, logolivre=:logolivre WHERE id_livre=$id_livre";
 
+		$params=array(
+						':titre' => $titre,
+
+						':genre' => $genre,
+
+						':logolivre' => $logolivre         
+
+						);
+		$sth = $conn->prepare($sql);
+		$sth->execute($params);
+
+		$params=array(			':date_publication'=>$date_publication         
+
+											);
+		$sql = "UPDATE publier set   date_publication=:date_publication WHERE id_livre=$id_livre";
+
+		$sth = $conn->prepare($sql);
+
+		$sth->execute($params);
+		}
 	}
 	catch(PDOException $e){
 
 	echo "Erreur : " . $e->getMessage();
 
 	}
+	header('Location:../admin/starter.php?page=livrelist');  
   }
  ?>
