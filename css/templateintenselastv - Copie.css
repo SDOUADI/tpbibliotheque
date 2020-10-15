@@ -1,0 +1,559 @@
+#menufixe{
+    position: fixed;
+    background-color: white;
+}
+
+body{
+    font-family: arial;
+}
+
+#logointense{
+    width: 55%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+h4{
+    font-size: 12pt;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#sousmenuhome{
+    display: none;
+}
+
+#sousmenufeatures{
+    display: none;
+}
+
+#sousmenupages{
+    display: none;
+}
+
+#sousmenuportfolio{
+    display: none;
+}
+
+#sousmenublog{
+    display: none;
+}
+
+#sousmenushop{
+    display: none;
+}
+
+#sousmenucomponents{
+    display: none;
+}
+.mborder{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder2{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder3{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder4{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder5{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder6{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+.mborder7{
+    display: none;
+    width: 15px;
+    height: 2px;
+    background-color: green;
+}
+
+#great{
+    margin-top: 90px;
+}
+
+#greatsoft{
+    font-size: 32pt;
+    padding-left: 120px;
+}
+
+#greatteam{
+    font-size: 32pt;
+    padding-left: 120px;
+}
+
+#dedicated{
+    font-size: 18pt;
+    padding-left: 120px;
+}
+
+#desktop{
+    font-size: 18pt;
+    padding-left: 120px;
+}
+
+#btnlearn{
+    color : white;
+    background-color: #00c985;
+    margin-left: 120px;
+    font-size: 12pt;
+    font-weight: bold;
+    /*border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;*/
+    /*border-radius: 30px;
+    height: 60px;*/
+
+}
+
+#btnphone{
+    color: white;
+    background-color: rebeccapurple;
+    width: 250px;
+    margin-left: 60px;
+    font-size: 12pt;
+    font-weight: bold;  
+}
+
+#picmanphone{
+    width: 100%
+}
+
+.p{
+    text-align: center;
+}
+
+#leading{
+    text-align: center;
+    font-size: 32pt;
+}
+
+#develop{
+    text-align: center;
+    font-size: 32pt;
+}
+
+#our{
+    text-align: center;
+    font-size: 18pt;
+}
+
+#clients{
+    text-align: center;
+    font-size: 18pt;
+}
+
+#more{
+    text-align: center;
+    font-size: 18pt;
+}
+
+video{
+    margin-left: 10px;
+    width: 900px;
+}
+
+#studies{
+    font-size: 32pt;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#modeling
+
+.container5{
+    background-color: white;
+}
+
+#modeling{
+    font-size: 22pt;
+    padding-top: 40px;
+}
+
+#database{
+    font-size: 22pt;
+}
+
+#revol{
+    font-size: 18pt;
+    color: darkgray;
+}
+
+#tradi{
+    font-size: 18pt;
+    color: darkgray;
+}
+
+#DBs{
+    font-size: 18pt;
+    color: darkgray;
+}
+
+#pinkcactus{
+    width: 100%;
+    padding-top: 40px;
+}
+
+.container6{
+    padding-top: 40px;
+}
+
+#art{
+    padding-top: 40px;
+}
+
+#state{
+    font-size: 22pt;
+    padding-top: 40px;
+}
+
+#process{
+    font-size: 22pt;
+}
+
+#information{
+    font-size: 18pt;
+    color: darkgray;
+}
+
+#algo{
+    font-size: 18pt;
+    color: darkgray;
+}
+
+#woman{
+    width: 100%;
+}
+
+.footer{
+    background-color: #23232f;
+    /*position : absolute;
+	bottom : 0;*/
+}
+
+#foo{
+    margin-top: 60px;
+}
+
+#tel{
+    padding-left: 15px;
+}
+
+#logofoot{
+    width: 235px;
+    height: 125px;
+    margin-top: -20px;
+}
+
+#phone{
+    color:white;
+    margin-left: 18px; 
+
+}
+
+.h6{
+    color: white;
+    display: inline;
+    margin-left: 6px;
+}
+.h7{
+    color: white;
+    margin-left: 48px;
+}
+
+#what{
+    padding-left: 70px;
+}
+
+h5{
+    color: white;
+}
+
+#dev{
+    margin-top: 0px; 
+}
+
+.h3{
+    color: darkgray;
+    font-size: 10pt;
+    --fmargin-top: 15px;
+}
+
+.h8{
+    color: white;
+    font-size: 32px;
+}
+
+h9{
+    color: darkgray;
+    font-size: 10pt;
+}
+
+input{
+    width: 300px;
+    height: 60px;
+    text-align: center;
+}
+
+button{
+    width: 150px;
+    height: 60px;
+    margin-top: 32px;
+    margin-left: 0px;
+    background-color: #00c985;
+    color : white;
+}
+
+#line{
+    margin-top: 30px;
+}
+
+hr{
+    background-color: darkgray;
+    margin-left: 30px;
+}
+
+.p{
+    color: darkgray;
+    margin-top: 10px;
+    margin-left: -200px;
+}
+
+#btnfoot{
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+#copy{
+    width: 700px;
+    padding-left: 40px; 
+    font-size: 12pt;
+}
+
+a{
+   height: 50px;
+    width: 50px;
+    margin-top: 55px;
+    margin-left: 100px;
+}
+
+#fleche{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20pt;
+    color:white;
+}
+
+#software{
+    margin-bottom: 150px;
+}
+
+#flexible{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#btnstarted{
+    color: white;
+    background-color: rebeccapurple;
+    font-size: 10pt;
+    margin-top: 60px;
+}
+
+h13{
+    font-size: 20pt;
+    color: white;
+}
+
+h14{
+    font-size: 16pt;
+    color: white;
+}
+
+#btnget{
+    color: white;
+    background-color: #00c985;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#team{
+    padding-top: 40px;
+}
+
+#ourteam{
+    font-size: 32pt;
+}
+
+#application{
+    font-size: 32pt;
+}
+
+#contact{
+    font-size: 18pt;
+}
+
+#project{
+    font-size: 18pt;
+}
+
+#picwomanphone{
+    width: 100%
+}
+
+#cont10{
+    margin-top: 150px;
+}
+#flex{
+    margin-left: -40px;
+}
+
+h16{
+    font-size: 18pt;
+}
+
+.h1{
+    margin-top: 30px;
+}
+
+#support{
+    
+}
+
+#tech{
+   
+}
+#onshore{
+    text-align: justify;  
+}
+
+h15{
+    font-size: 18.5pt;
+}
+
+h17{
+    font-size: 14pt;
+}
+
+#intense{
+    color: darkgray;
+}
+
+#foryou{
+    color: darkgray;
+}
+
+.meet{
+    text-align: center;
+    font-size: 30pt;
+}
+
+#team{
+    margin-bottom: 150px;
+}
+#rogers{
+    margin-left: -20px;
+    text-align: center;
+}
+
+.mark{
+    width: 60%;
+    border-radius: 60%;
+}
+
+#rivera{
+    margin-left: 60px;
+    text-align: center;
+}
+
+#baker{
+    margin-left: 60px;
+    text-align: center;
+}
+
+#jackson{
+    margin-left: 60px;
+    text-align: center;
+}
+
+h10{
+    font-size: 20pt;
+}
+
+h11{
+    font-size: 12pt;
+    color: darkgray;
+}
+
+h12{
+    font-size: 12pt;
+    color: rebeccapurple;
+    
+}
+
+#fullresp{
+    background-color:black;
+    color: white; 
+}
+
+#power{
+    background-color: #00c985;
+    color: white;
+}
+
+#unique{
+    background-color: rebeccapurple;
+    color: white;
+}
+
+#money{
+    background-color: #79b931;
+    color: white;
+}
+
+#efficient{
+    background-color: #218ee1;
+    color: white;
+}
+
+#inno{
+    background-color: #ef972b;
+    color: white;
+}
+
+#usability{
+    background-color: #e52b62;
+    color: white;
+}
+
+#alignement{
+    color: white;
+}
