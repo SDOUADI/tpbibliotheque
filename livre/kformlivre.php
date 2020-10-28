@@ -21,6 +21,9 @@ include "../includes/define.php";
 			$genre=$result['genre'];
 			$logolivre=$result['logolivre'];
 			$date_publication=$result['date_publication'];
+			$description=$result['description'];
+			$nombredepages=$result['nombredepages'];
+			$prix=$result['prix'];
 		    
 				 $action=$path['updatelivre'];
 				 $titreForm=" MODIFIER LIVRE ";
@@ -113,6 +116,21 @@ include "../includes/define.php";
 				</select>
 			</div>
 			
+			<div class="c100">
+                <label for="description">Description : </label>
+                <input type="text" id="description" name="description" value="<?php echo @$description;?>">
+            </div>	
+
+			<div class="c100">
+                <label for="nombredepages">Nombre de pages : </label>
+                <input type="text" id="nombredepages" name="nombredepages" value="<?php echo @$nombredepages;?>">
+            </div>			
+
+			<div class="c100">
+                <label for="prix">Prix : </label>
+                <input type="text" id="prix" name="prix" value="<?php echo @$prix;?>">
+            </div>	
+
 			<div class="c100">
 			<label for="date_publication">Date de publication</label>
 			<input type="date" id="date_publication" name="date_publication" value="<?php echo @$date_publication; ?>">  

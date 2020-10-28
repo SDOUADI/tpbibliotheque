@@ -24,6 +24,9 @@ include "../includes/database.php";
         
             $titre = $_POST['titre'];
             $genre = $_POST['genre'];
+            $description = $_POST['description'];
+            $nombredepages = $_POST['nombredepages'];
+            $prix = $_POST['prix'];
             $id_auteur = $_POST['id_auteur'];
             $id_editeur = $_POST['id_editeur'];
             $date = $_POST['date_publication'];
@@ -35,14 +38,17 @@ include "../includes/database.php";
             
                  // Insertion dans la table livre
                     
-                $sql = "INSERT INTO livre (titre,genre,logolivre,id_bibliotheque)
-                VALUES(:titre,:genre,:logolivre,:id_bibliotheque)";
+                $sql = "INSERT INTO livre (titre,genre,logolivre,id_bibliotheque,description,nombredepages,prix)
+                VALUES(:titre,:genre,:logolivre,:id_bibliotheque,:description,:nombredepages,:prix)";
                 
                 $sth = $conn->prepare( $sql);               
               
                 $params=[
                 ':titre' => $titre,
-                ':genre' => $genre,               
+                ':genre' => $genre, 
+                ':description' => $description,
+			    ':nombredepages' => $nombredepages,
+				':prix' => $prix,               
                 ':id_bibliotheque' => $id_bibliotheque,
                 ':logolivre' => $logolivre];
                 

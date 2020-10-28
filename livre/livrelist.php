@@ -49,7 +49,7 @@ include "../includes/define.php";
                 
                 /*Sélectionne les valeurs dans les colonnes prenom et mail de la table
                  *users pour chaque entrée de la table*/
-                $sth = $conn->prepare("SELECT livre.titre,livre.id_livre,livre.genre,livre.logolivre,auteur.nom as auteur_name,editeur.nom as editeur_name 
+                $sth = $conn->prepare("SELECT livre.titre,livre.id_livre,livre.genre,livre.description,livre.nombredepages,livre.prix,livre.logolivre,auteur.nom as auteur_name,editeur.nom as editeur_name 
                 
                 FROM livre,publier,auteur,editeur 
                 
@@ -65,7 +65,10 @@ include "../includes/define.php";
 					   echo "<tr>";
 						
 						echo "<td>". $livre['titre']."</td>";
-						echo "<td>". $livre['genre']."</td>";
+                        echo "<td>". $livre['genre']."</td>";
+                        echo "<td>". $livre['description']."</td>";
+                        echo "<td>". $livre['nombredepages']."</td>";
+                        echo "<td>". $livre['prix']."</td>";
 						//echo "<td>". $livre['logolivre']."</td>";
                       echo "<td > <img src='../uploads/". $livre['logolivre']."'></img></td>";
 
