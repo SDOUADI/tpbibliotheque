@@ -45,7 +45,7 @@ echo '<div class="container-fluid">
                 <p class="livre-auteur">'.$auteur.'</p> 
                 <p class="livre-editeur">'.$editeur.'</p>
                 <p class="livre-datepublication">'.$date_publication.'</p>
-                <a class=""><button  type="button" class="btn btn-success">Emprunter</button></a>  
+                <a href="?page=emprunter&&id='.$id_livre.'" class="btn btn-success">Emprunter</a>  
                 </div>
             </div>
     </div>

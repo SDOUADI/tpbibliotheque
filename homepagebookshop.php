@@ -28,8 +28,14 @@
 			   include 'template/content.php';
 			}
 			else if($page=="livre"){
-			  include 'template/livre.php';
-			}
+        include 'template/livre.php';
+         
+      }
+      
+      else if($page=="emprunter"){
+        include 'template/kformemprunter.php';
+         
+      }
               ?>
         </div>
 
