@@ -1,10 +1,22 @@
 <div class="row">
+<div class="c100" id="rechercher">
+<input class="btn" type="submit" value="Rechercher">
+</div>
 <?php
     
     include "includes/database.php";
             
             try{
                 
+                $sth = $conn->prepare("select distinct genre FROM livre");
+                $sth->execute();
+                $listeGenres= $sth->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($listeGenres as $grow => $genre){
+
+                echo $genre["genre"];
+                echo "<div class='container'> <div class='row'>";
+            
                 
                 /*Sélectionne les valeurs dans les colonnes prenom et mail de la table
                  *users pour chaque entrée de la table*/
@@ -12,15 +24,17 @@
                 
                 FROM livre,publier,auteur,editeur 
                 
-                WHERE publier.id_livre=livre.id_livre AND publier.id_auteur=auteur.id_auteur AND publier.id_editeur=editeur.id_editeur");
-                $sth->execute();
+                WHERE publier.id_livre=livre.id_livre AND publier.id_auteur=auteur.id_auteur AND publier.id_editeur=editeur.id_editeur AND livre.genre=:genre");
+                $parent=array("genre"=>$genre["genre"]);
+                $sth->execute($parent);
                 
                 /*Retourne un tableau associatif pour chaque entrée de notre table
                  *avec le nom des colonnes sélectionnées en clefs*/
                 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
                 
 				foreach ($result as $row => $livre) {
-    echo '<div class="col-4">';
+                
+        echo '<div class="col-4">';
         echo '<div class="card livrecard border border-primary">';
         echo '<img class="card-img-top" src="uploads/'.$livre['logolivre'].'" alt="Card image cap">';
         echo '<div class="card-body">';
@@ -32,8 +46,10 @@
         echo '</div>';
     echo '</div>';
         }
-                
+        echo '</div>';
+        echo '</div>';     
                 }
+            }
                   
             catch(PDOException $e){
                 echo "Erreur : " . $e->getMessage();
