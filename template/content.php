@@ -1,7 +1,7 @@
-<div class="row">
 <div class="c100" id="rechercher">
-<input class="btn" type="submit" value="Rechercher">
+<input type="text" name="rechercher" placehoder="rechercher un livre">
 </div>
+<div class="row">
 <?php
     
     include "includes/database.php";
