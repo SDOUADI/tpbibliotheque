@@ -1,14 +1,22 @@
-<div class="c100" id="rechercher">
-<input type="text" name="rechercher" placehoder="rechercher un livre">
-</div>
+<form action="search" method="get" class="form-inline">
+            <div class="input-group">
+              <input type="text" id="search_livre" name="search" class="form-control" placeholder="Titre du livre">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-info"><span class="fa fa-search"></span>
+                  Rechercher
+                </button>
+              </div>
+            </div>
+          </form>'
 <div class="row">
 <?php
     
     include "includes/database.php";
+    
             
             try{
                 
-                $sth = $conn->prepare("select distinct genre FROM livre");
+                $sth = $conn->prepare("SELECT distinct genre FROM livre,publier where livre.id_livre=publier.id_livre");
                 $sth->execute();
                 $listeGenres= $sth->fetchAll(PDO::FETCH_ASSOC);
 
