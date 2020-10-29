@@ -38,7 +38,7 @@ echo '<div class="container-fluid">
 	    
 	    /* tu as oublié tes balises <?php et le echo> */
 	    
-                <img class="card-img-left" src="uploads/'.<?php echo $logolivre?>.'" alt="Card image cap">  
+                <img class="card-img-left" src="uploads/<?php echo $logolivre?>" alt="Card image cap">  
             </div>  
             
             <div class="col-7">
