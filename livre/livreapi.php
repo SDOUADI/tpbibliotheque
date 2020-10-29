@@ -3,7 +3,7 @@
 include "../includes/functions.php";
 include "../includes/database.php";
 
-$titre = securisation(@$_GET['titre']);
+$titre = securisation(@$_GET['term']);
  $sql = "SELECT * FROM livre WHERE titre LIKE '%".$titre."%'";
 
     $sth = $conn->prepare($sql);
@@ -16,17 +16,14 @@ $titre = securisation(@$_GET['titre']);
       if($i>0)$json .=",";
        $json .="{";
         $livreList[]=$livre;
-        $json .='"id_livre":"'.$livre['id_livre'].'"';
-        $json .=',"titre":"'.$livre['titre'].'"';
-       $json .="}";
-      $i++;
-     }
-     $json .="]";
+        $json .=',"value":"'.$livre['titre'].'"';
+        $json .="}";
+        $i++;
+        }
+        $json .="]";
 
 
   echo $json;
-
-
 
 
 

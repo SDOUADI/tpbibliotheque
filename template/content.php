@@ -1,14 +1,32 @@
+
 <form action="search" method="get" class="form-inline">
-            <div class="input-group">
-              <input type="text" id="search_livre" name="search" class="form-control" placeholder="Titre du livre">
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-info"><span class="fa fa-search"></span>
-                  Rechercher
-                </button>
-              </div>
-            </div>
-          </form>'
+    <div class="input-group">
+        <input type="text" id="search_livre" name="search" class="form-control" placeholder="Titre du livre">
+    <div class="input-group-btn">
+        <button type="submit" class="btn btn-info"><span class="fa fa-search"></span>Rechercher </button>
+    </div>
+    </div>
+</form>
 <div class="row">
+<script>
+
+$( document ).ready(function() {
+
+    $("#search_livre").on('input',function(){
+alert('ok');});
+	$("#search_livre").autocomplete({
+			source: "livre/livreapi.php",
+			select: function( event, ui ) {
+					event.preventDefault();
+					$("#search_livre").val(ui.item.value);
+			}
+
+	});
+});
+
+</script>
+
+
 <?php
     
     include "includes/database.php";
