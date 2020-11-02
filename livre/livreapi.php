@@ -16,18 +16,14 @@ $titre = securisation(@$_GET['term']);
       if($i>0)$json .=",";
        $json .="{";
         $livreList[]=$livre;
+        $json .='"id":"'.$livre['id_livre'].'"';
         $json .=',"value":"'.$livre['titre'].'"';
         $json .="}";
         $i++;
         }
         $json .="]";
 
-
   echo $json;
-
-
-
-
 //phpinfo();
 
 //include "../includes/functions.php";
@@ -45,6 +41,9 @@ $titre = securisation(@$_GET['term']);
     //}
     //$data=json_encode($result);
     //print_r($data);
-        ?>
+    ?>
  
  
+  
+  
+
