@@ -12,17 +12,17 @@
 
 $( document ).ready(function() {
 
-  //  $("#search_livre").on('input',function(){
-//alert('ok');});
-//	$("#search_livre").autocomplete({
-	//		source: "livre/livreapi.php",
-		//	select: function( event, ui ) {
-			//		event.preventDefault();
-				//	$("#search_livre").val(ui.item.value);
-		//	}
+   $("#search_livre").on('input',function(){
+alert('ok');});
+	$("#search_livre").autocomplete({
+			source: "livre/livreapi.php",
+			select: function( event, ui ) {
+					event.preventDefault();
+					$("#search_livre").val(ui.item.value);
+			}
 
-//	});
-echo "TEST SCRIPT";
+	});
+//alert ("TEST SCRIPT");
 });
 
 </script>
